@@ -1,8 +1,10 @@
 # Orbital · Lunar Lander Lab
 
-A working version of the attached rocket reward-shaping project, with **real PPO training, Gymnasium Box2D physics, saved neural networks, an interactive local dashboard, honest evaluation, and MP4 recordings**. No API keys, paid services, or GPU required.
+A rocket reward-shaping project with **real PPO training, Gymnasium Box2D physics, saved neural networks, an interactive local dashboard, honest evaluation, and MP4 recordings**. No API keys, paid services, or GPU required.
 
 ## Hosted browser view
+
+**[Open the browser demo](https://mohammadsadaf.github.io/orbital-lunar-lander-lab/)** · **[Source code](https://github.com/mohammadsadaf/orbital-lunar-lander-lab)**
 
 The `docs/` directory is a self-contained browser archive of the five measured experiments. It includes the original training curves, Box2D replays, evaluations, CSV downloads, and recorded videos. It can be served by GitHub Pages or any static host, including from a repository subpath.
 
@@ -12,7 +14,7 @@ After creating new local runs, rebuild the archive with `python scripts/export_s
 
 ## Open the lab
 
-On this Mac, double-click **Launch Lab.command**, then visit **http://127.0.0.1:8765**. The dashboard is already running there for this session. Keep its terminal process running while using it. If that address is in use, use `rocketlab serve --port 8766` instead.
+On macOS, run `zsh "Launch Lab.command"`, then visit **http://127.0.0.1:8765**. To enable double-click launching after cloning, run `chmod +x "Launch Lab.command"` once. Keep the terminal process running while using the dashboard. If that address is in use, use `rocketlab serve --port 8766` instead.
 
 The launcher uses the environment prepared alongside this project when available. On another computer, it creates `.venv` and installs the dependencies on first launch; that step needs internet access. The dashboard itself runs offline and includes local fonts. The models, results, and clips in `runs/` are already included.
 
@@ -120,4 +122,4 @@ The server binds to `127.0.0.1` and rejects cross-origin process-launch requests
 - [Gymnasium RecordVideo](https://gymnasium.farama.org/api/wrappers/misc_wrappers/#gymnasium.wrappers.RecordVideo) — MP4 recording.
 - [Policy invariance under reward transformations](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf) — potential-based reward shaping.
 
-Inspired by the user-provided article, “Training an AI to land a rocket with reward shaping,” attributed there to Hari (@harixganesh). Bundled DM Sans and Space Grotesk fonts are distributed under their included SIL Open Font Licenses. Gymnasium, Stable-Baselines3, PyTorch, and other dependencies retain their own licenses.
+Inspired by the article, “Training an AI to land a rocket with reward shaping,” by Hari (@harixganesh). Bundled DM Sans and Space Grotesk fonts are distributed under their included SIL Open Font Licenses. Gymnasium, Stable-Baselines3, PyTorch, and other dependencies retain their own licenses.
